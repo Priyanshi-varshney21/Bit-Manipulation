@@ -28,3 +28,17 @@ def Binary_to_decimal(n):
 n=int(input("Enter n:"))
 ans=Binary_to_decimal(n)
 print(ans)
+
+# CHECK Ith BIT
+def checkIthBit(n):
+  rem=""
+  while n>0:
+    if n%2==0:
+      rem+="0"
+    else:
+      rem+="1"
+    n=n//2
+  if i<len(rem) and rem[i]=="1":
+    return True
+  else:
+    return False
