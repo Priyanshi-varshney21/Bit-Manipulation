@@ -61,3 +61,13 @@ def countSetBits(self, n: int) -> int:
             else:
                 result[i]=result[i//2]        
         return result[i]
+
+# MINIMUM BITS FLIP TO NEED A NUMBER
+def minBitsFlip(self, start, goal):
+        x=start^goal
+        count=0
+        while x:
+            count+=x&1
+            x=x>>1
+        return count
+        
