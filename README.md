@@ -70,4 +70,11 @@ def minBitsFlip(self, start, goal):
             count+=x&1
             x=x>>1
         return count
+
+# SINGLE NUMBER
+def singleNumber(self, nums):
+        ans=0
+        for i in nums:
+            ans=ans^i
+        return ans
         
