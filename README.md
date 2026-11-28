@@ -71,10 +71,26 @@ def minBitsFlip(self, start, goal):
             x=x>>1
         return count
 
-# SINGLE NUMBER
+# SINGLE NUMBER 1
 def singleNumber(self, nums):
         ans=0
         for i in nums:
             ans=ans^i
         return ans
+
+# SINGLE NUMBER 2
+def singleNumber(nums):
+    ans = 0
+
+    for i in range(32):
+        count = 0
+
+        for num in nums:
+            if (num >> i) & 1:
+                count += 1
+
+        if count % 3:
+            ans |= (1 << i)
+
+    return ans
         
